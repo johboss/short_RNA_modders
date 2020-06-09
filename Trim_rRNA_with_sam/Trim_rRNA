@@ -1,0 +1,4 @@
+#Trims rRNA seq from allignments .bam file using the aligned sequence positions. Can be used for any other defined sequense.
+
+bedtools intersect -sorted -b *_rRNA.bed -a *_alignments.bam -v > filtered.bam
+samtools view -o filtered.bam.sam filtered.bam
